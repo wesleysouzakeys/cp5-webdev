@@ -40,56 +40,43 @@ function Inserir() {
   };
 
   return (
-    <section>
-      <h1>Cadastro de Produtos</h1>
-      {/*chando a função handleSubmit dentro do form */}
-      <form onSubmit={handleSubmit}>
-        <fieldset>
-          <legend>PRODUTO</legend>
-          <p>
-            <label htmlFor="idNome"> Nome do Produto:</label>
-            <input
-              type="text"
-              name="nome"
-              id="idNome"
-           
-              value={produto.nome}
-              /*chamando a função handleChange dentro do input */
-              onChange={handleChange}
-            />
-          </p>
-          <p>
-            <label htmlFor="idDesc">Descrição Produto:</label>
-            <input
-              type="text"
-              name="desc"
-              id="idDesc"
-              
-              value={produto.desc}
-              /*chamando a função handleChange dentro do input */
-              onChange={handleChange}
-            />
-          </p>
-          <p>
-            <label htmlFor="idValor"> Valor do Produto:</label>
-            <input
-              type="text"
-              name="valor"
-              id="idValor"
-              
-              value={produto.valor}
-              /*chamando a função handleChange dentro do input */
-              onChange={handleChange}
-            />
-          </p>
-          <p>
-            <button type="submit">
-              CADASTRAR
-            </button>
-          </p>
-        </fieldset>
-      </form>
-    </section>
+    <>
+      <div class="container">
+        <div class="content first-content">
+          <div class="first-column">
+            <h2 class="title title-primary">Cadastre seu produto</h2>
+            <p class="description description-primary">Insira todas as informações pertinentes.</p>
+          </div>
+          <div class="second-column">
+            <h2 class="title title-second">Cadastro</h2>
+            <p class="description description-second">Insira abaixo as informações:</p>
+            <form onSubmit={handleSubmit} class="form">
+              <label class="label-input" for="">
+                <i class="far fa-user icon-modify"></i>
+                <input type="text" placeholder='Nome do Produto: '
+                  onChange={handleChange} name="nome" />
+              </label>
+
+              <label class="label-input" for="">
+                <i class="fas fa-lock icon-modify"></i>
+                <input type="text" placeholder='Descrição'
+                  onChange={handleChange} name="desc" />
+              </label>
+
+              <label class="label-input" for="">
+                <i class="fas fa-lock icon-modify"></i>
+                <input type="text" placeholder='Valor'
+                  onChange={handleChange} name="valor" />
+              </label>
+
+              <button class="btn btn-second" type="submit">Cadastrar</button>
+            </form>
+          </div>
+        </div>
+        <div class="content second-content">
+        </div>
+      </div>
+    </>
   );
 }
 export default Inserir;

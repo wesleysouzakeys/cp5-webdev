@@ -1,7 +1,8 @@
 /* useParams -Ele serve para receber parâmetros pela rota. Quando vamos criar uma rota, é possível fazer que ela receba parâmetros */
 import { useNavigate, useParams } from 'react-router-dom';
-import { ListaProdutos } from '../components/ListaProdutos';
+import { ListaProdutos } from '../../components/ListaProdutos';
 import { useState } from 'react';
+import './Editar.css'
 
 function Editar() {
   //Recuperando o ID do produto selecionado com useParams()
@@ -45,8 +46,8 @@ function Editar() {
   };
 
   return (
-    <section >
-      <h1 >EDITAR PRODUTOS</h1>
+    <section className='grid-container'>
+      <h1 className='h1-editar'>EDITAR PRODUTOS</h1>
       {/*chamando a função handleSubmit dentro do form */}
       <form onSubmit={handleSubmit}>
         <fieldset>
@@ -56,40 +57,43 @@ function Editar() {
               type="hidden"
               name="id"
               value={produto.id}
-               /*chamando a função handleChance dentro do input*/
+              /*chamando a função handleChance dentro do input*/
               onChange={handleChange}
             />
           </div>
           <div>
             <label htmlFor="idNome">Nome do Produto:</label>
             <input
+              className='input-editar'
               type="text"
               name="nome"
               id="idNome"
               value={produto.nome}
-                 /*chamando a função handleChance dentro do input*/
+              /*chamando a função handleChance dentro do input*/
               onChange={handleChange}
             />
           </div>
           <div>
             <label htmlFor="idDesc">Descrição do Produto:</label>
             <input
+              className='input-editar'
               type="text"
               name="desc"
               id="idDesc"
               value={produto.desc}
-                 /*chamando a função handleChance dentro do input*/
+              /*chamando a função handleChance dentro do input*/
               onChange={handleChange}
             />
           </div>
           <div>
             <label htmlFor="idValor">Valor do Produto:</label>
             <input
+              className='input-editar'
               type="text"
               name="valor"
               id="idValor"
               value={produto.valor}
-                 /*chamando a função handleChance dentro do input*/
+              /*chamando a função handleChance dentro do input*/
               onChange={handleChange}
             />
           </div>

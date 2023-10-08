@@ -1,12 +1,13 @@
 import {} from 'react';
 import { Link } from 'react-router-dom';
-import { ListaProdutos } from '../components/ListaProdutos';
+import { ListaProdutos } from '../../components/ListaProdutos';
 import { GrFormEdit as Editar } from 'react-icons/gr';
 import { RiDeleteBin2Fill as Excluir } from 'react-icons/ri';
+import './Produtos.css';
 
 function Produtos() {
   return (
-    <section>
+    <section className='grid-container produtos'>
       <h1>LISTA DE PRODUTOS</h1>
       <div>
         <table>

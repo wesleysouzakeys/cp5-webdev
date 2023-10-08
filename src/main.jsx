@@ -4,12 +4,12 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App.jsx';
 import Error from './routes/Error.jsx';
 import Home from './routes/Home.jsx';
-import Produtos from './routes/Produtos.jsx';
+import Produtos from './routes/Produtos/Produtos.jsx';
 import Inserir from './routes/Inserir.jsx';
-import Editar from './routes/Editar.jsx';
-import Excluir from './routes/Excluir.jsx';
-import Conteudo from './routes/Conteudo.jsx';
-import Login from './routes/Login.jsx';
+import Editar from './routes/Editar/Editar.jsx';
+import Excluir from './routes/Excluir/Excluir.jsx';
+import Conteudo from './routes/Conteudo/Conteudo.jsx';
+import Login from './routes/Login/Login.jsx';
 
 
 const router = createBrowserRouter([

@@ -1,0 +1,37 @@
+header {
+    height: 70px;
+    box-shadow: 0 0 28px rgba(0, 0, 0, 0.07);
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    margin: 0 120px;
+}
+
+header nav {
+    width: 600px;
+}
+
+header ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+header li {
+    list-style-type: none;
+}
+
+header li a, header button {
+    text-decoration: none;
+    padding: 8px 15px;
+    font-size: 18px;
+    background-color: #ffffff00;
+    border: 1px solid black;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}

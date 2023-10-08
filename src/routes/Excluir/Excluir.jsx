@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { ListaProdutos } from '../components/ListaProdutos';
+import { ListaProdutos } from '../../components/ListaProdutos';
+import './Excluir.css'
 
 
 function Excluir() {
@@ -30,16 +31,21 @@ function Excluir() {
   };
 
   return (
-    <section>
-      <h1>Excluir Produto</h1>
+    <section className='grid-container'>
+      <h1 className='h1-excluir'>Excluir Produto</h1>
       <div>
+        <label htmlFor="">
+
         <p>Nome : {produto.nome}</p>
+        <br />
         <p>Desc : {produto.desc}</p>
+        <br />
         <p>valor : {produto.valor}</p>
+        </label>
       </div>
-      <div>
+      <div className='div-buttons'>
         {/*chamando a função handleExclude dentro do botão*/}
-        <button onClick={handleExclude} >
+        <button className='excluir' onClick={handleExclude} >
           EXCLUIR
         </button>
         {/*chamando o navigate para voltar para a tela produtos */}

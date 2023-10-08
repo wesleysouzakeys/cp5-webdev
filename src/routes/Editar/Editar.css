@@ -1,0 +1,62 @@
+/* Estilo para o título "EDITAR PRODUTOS" */
+.h1-editar {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilo para o formulário */
+form {
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para a legenda do campo do produto selecionado */
+fieldset legend {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #58af9b;
+}
+
+/* Estilo para as divisões (div) dentro do formulário */
+div {
+    margin-bottom: 15px;
+}
+
+/* Estilo para as etiquetas (labels) */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-left: 25px;
+}
+
+/* Estilo para os campos de entrada (inputs) */
+.input-editar {
+    width: 96%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-left: 25px;
+}
+
+/* Estilo para o botão "EDITAR" */
+button {
+    background-color: #58af9b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 25px;
+}
+
+/* Estilo para o botão "EDITAR" quando passa o mouse */
+button:hover {
+    background-color: #2e856e;
+}
