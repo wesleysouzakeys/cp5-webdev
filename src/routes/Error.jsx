@@ -1,10 +1,12 @@
-import {} from 'react'
+import { } from 'react'
 
 
-function Error (){
-  return(
+function Error() {
+  return (
     <section >
-    <h1>404-Página não encontrada.</h1>
+      <center>
+        <h1>404-Página não encontrada.</h1>
+      </center>
     </section>
   )
 }

@@ -5,13 +5,10 @@ import { useNavigate } from 'react-router-dom';
 
 
 function Inserir() {
-  /*Hooks - navigate */
   const navigate = useNavigate();
 
-  //Gerando um novo ID
   let novoId = ListaProdutos[ListaProdutos.length - 1].id + 1;
 
-  /*Hooks - useState */
   const [produto, setProduto] = useState({
     id: novoId,
     nome: '',
@@ -19,23 +16,15 @@ function Inserir() {
     valor: '',
   });
 
-  /*funções */
-
   const handleSubmit = (e) => {
-    /*serve para prevenir o comportamento padrão de um evento */
     e.preventDefault();
-    /*puxa tudo que estiver na lista de produtos */
     ListaProdutos.push(produto);
     navigate('/produtos');
   };
 
   const handleChange = (e) => {
-    /*serve para prevenir o comportamento padrão de um evento */
     e.preventDefault();
-    //Destructuring
     const { name, value } = e.target;
-    //Através da função set do useState, vamos adicionar o valor(value), na propriedade name que é a mesma que foi declarada no useState produto.
-    //Utilize o SPREAD, para tornar a função mais simples!!
     setProduto({ ...produto, [name]: value });
   };
 
@@ -65,7 +54,7 @@ function Inserir() {
 
               <label class="label-input" for="">
                 <i class="fas fa-lock icon-modify"></i>
-                <input type="text" placeholder='Valor'
+                <input type="number" placeholder='Valor'
                   onChange={handleChange} name="valor" />
               </label>
 

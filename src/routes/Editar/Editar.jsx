@@ -5,15 +5,10 @@ import { useState } from 'react';
 import './Editar.css'
 
 function Editar() {
-  //Recuperando o ID do produto selecionado com useParams()
   const { id } = useParams();
-  //Utilizando o useNavigate para fazer um redirect
   const navigate = useNavigate();
 
-  /*Filter-para filtrar elementos de um array de dados antes de renderizá-los em uma lista */
   const recProdutoListaById = ListaProdutos.filter((item) => item.id == id);
-
-  /*Hook -useState*/
 
   const [produto, setProduto] = useState({
     id: recProdutoListaById[0].id,
@@ -22,7 +17,6 @@ function Editar() {
     valor: recProdutoListaById[0].valor,
   });
 
-  /*funções */
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -32,23 +26,18 @@ function Editar() {
         indice = index;
       }
     });
-    /*metodo slice- vai dividir o array com base no indice e no objeto */
     ListaProdutos.splice(indice, 1, produto);
-    /*chamar a tela produtos */
     navigate('/produtos');
   };
 
   const handleChange = (event) => {
-    /*desestruturando */
     const { name, value } = event.target;
-    /*pegando o useState e fazendo um spred no produto pegando o name e value do input */
     setProduto({ ...produto, [name]: value });
   };
 
   return (
     <section className='grid-container'>
       <h1 className='h1-editar'>EDITAR PRODUTOS</h1>
-      {/*chamando a função handleSubmit dentro do form */}
       <form onSubmit={handleSubmit}>
         <fieldset>
           <legend>PRODUTO SELECIONADO</legend>
@@ -57,7 +46,6 @@ function Editar() {
               type="hidden"
               name="id"
               value={produto.id}
-              /*chamando a função handleChance dentro do input*/
               onChange={handleChange}
             />
           </div>
@@ -69,7 +57,6 @@ function Editar() {
               name="nome"
               id="idNome"
               value={produto.nome}
-              /*chamando a função handleChance dentro do input*/
               onChange={handleChange}
             />
           </div>
@@ -81,8 +68,7 @@ function Editar() {
               name="desc"
               id="idDesc"
               value={produto.desc}
-              /*chamando a função handleChance dentro do input*/
-              onChange={handleChange}
+;              onChange={handleChange}
             />
           </div>
           <div>
@@ -93,7 +79,6 @@ function Editar() {
               name="valor"
               id="idValor"
               value={produto.valor}
-              /*chamando a função handleChance dentro do input*/
               onChange={handleChange}
             />
           </div>

@@ -9,7 +9,6 @@ function Nav() {
   const getUser = sessionStorage.getItem('userData');
   const getSenha = sessionStorage.getItem('senhaData');
 
-  //criando a função logout
   const handleLogout = async () => {
     sessionStorage.removeItem('userData');
     sessionStorage.removeItem('senhaData');
@@ -30,6 +29,9 @@ function Nav() {
               </li>
               <li>
                 <Link to="conteudo">Conteudo</Link>
+              </li>
+              <li>
+                <Link to="sobre">Sobre</Link>
               </li>
               <li>
                 <Link to="/cadastrar/produto">Cadastrar Produto</Link>
