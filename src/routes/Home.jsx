@@ -10,9 +10,9 @@ function Home() {
 
   const imagens = [
 
-    { id: '1', image: './src/assets/mexican1.jpg' },
-    { id: '2', image: './src/assets/mexican2.jpg' },
-    { id: '3', image: './src/assets/mexican3.jpg' },
+    { id: '1', image: './assets/mexican1.jpg' },
+    { id: '3', image: './assets/mexican3.jpg' },
+    { id: '2', image: './assets/mexican2.jpg' },
   ];
 
   useEffect(() => {
