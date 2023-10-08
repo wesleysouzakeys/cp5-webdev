@@ -68,7 +68,7 @@ function Editar() {
               name="desc"
               id="idDesc"
               value={produto.desc}
-;              onChange={handleChange}
+              onChange={handleChange}
             />
           </div>
           <div>
